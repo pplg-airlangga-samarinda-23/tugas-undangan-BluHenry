@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+}
+.Resmi {
+    text-align: center;
+}
+
+.judul_undangan{
+    color: rgb(rgba(4, 70, 90, 0.601), green, blue) ;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Grey Qo", cursive;
+}
+.kelompok {
+    text-align: center;
+}
+.diadakan {
+    text-align: center;
+}
+.randomiz {
+    text-align: center;
+}
+.Map {
+    text-align: center;
+}
+
+p {
+    color: aliceblue;
+}
+h1 {
+    color: aliceblue;
+}
+h2 {
+    color: aliceblue;
+}
+h3 {
+    color: aliceblue;
+}
+h4 {
+    color: aliceblue;
+}
+h5 {
+    color: aliceblue;
+}
+ol{
+    color: aliceblue;
+    text-align: center;
+}
+li {
+    color: aliceblue;
+    text-align: center;
+}
