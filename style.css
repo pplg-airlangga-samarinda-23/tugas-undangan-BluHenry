@@ -50,3 +50,48 @@ li {
     color: aliceblue;
     text-align: center;
 }
+
+.corossel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin:0 auto;
+}
+
+.inner_corossel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.inner_corossel img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.inner_corossel img.active {
+    display: block;
+}
+
+
+.Prev,
+.Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+.Prev {
+    left: 10px;
+}
+
+.Next {
+    right: 10px;
+}
