@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    align-items: center;
 }
 .Resmi {
     text-align: center;
@@ -95,3 +96,10 @@ li {
 .Next {
     right: 10px;
 }
+
+.database {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+

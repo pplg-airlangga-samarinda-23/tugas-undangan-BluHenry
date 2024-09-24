@@ -13,6 +13,7 @@
 
 </head>
 <body>
+    <form action="insert.php" method="POST">
     <div class="Resmi">
         <p class="judul_undangan"> Undangan pernikahan </p>
         <h1 style="color: grey;"> caelus % firefly </h1>
@@ -60,10 +61,58 @@
         
         <h2>lokasi stasiun express ke penacony</h2>
         <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=137.54848480224612%2C35.35692127995706%2C137.98999786376956%2C35.54570085592609&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/35.4514/137.7692">Lihat peta lebih besar</a></small>
-    
+            <h3>
+                Ucapan & Doa
+            </h3>
+            <p>
+                Berikan ucapan harapan & do'a kepada kedua mempelai
+            </p>
+        <div class="Nama">
+            <label> </label>
+            <input type="text" placeholder="Nama" name="nama" required style="color: black;">
+
+        </div>
+
+        <div class="Ucapan">
+            <textarea type="text" name="ucapan" placeholder="Ucapan" cols="30" rows="5" required></textarea> <br>
+
+        </div>
+        <select name="keterangan">
+            <option value="" selected disabled hidden>Konfirmasi kehadiran</option>
+            <option value="1">Ya saya hadir</option>
+            <option value="2">Tidak Hadir Malas</option>
+            <option value="3">tidak tahu dan tidak mau tempe</option>
+        </select>
         <br>
-        <audio controls loop src="Gawr Gura - Night Dancer (AI Cover).mp3" autoplay></audio>
-            </div>
+        <button type="submit">Kirim</button>
+        
+        <?php
+            include 'koneksi.php';
+            $SQL2 = "SELECT * FROM catatan_tamu ORDER BY id DESC";
+            $hasil = $connection->query($SQL2);
+            ?>
+        <div style="height: 200px; width:300px;  overflow:scroll; margin-left: 600px;" class="database">
+            <?php
+
+            while ($baris = $hasil->fetch_row()) {
+            ?>
+                <div style="border-style:solid; border-color:crimson; margin:10px;">
+                    <p style="font-weight:hold;"><?= $baris[1] ?></p>
+                    <p><?= $baris[2] ?></p>
+                </div>
+<?php
+            }
+
+                $hasil->free_result();
+            ?>
+        </div>
+            
+
+            
+
+
+ 
+        </form>
     
 </body>
 </html>
